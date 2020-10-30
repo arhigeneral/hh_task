@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- добавим стили mocha для отображения результатов -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- добавляем сам фреймворк mocha -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    // включаем режим тестирования в стиле BDD
+    mocha.setup('bdd');
+  </script>
+  <!-- добавим chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai предоставляет большое количество функций. Объявим assert глобально
+    let assert = chai.assert;
+  </script>
+</head>
+
+<body>
+  <p>Ener your time</p>
+  <input  id="time" type="time" name="" value="12:30">
+  <br>
+  <br>
+  <button type="button" onclick="Time()" name="button">Press</button>
+  <p></p>
+  <script type="text/javascript">
+    'use script'
+      let time = document.getElementById("time").value;
+    function Time(time) {
+      let time1 = "11:59"
+      if (time > time1){
+        alert("Good evening!")
+        result = "Good evening!"
+        return result
+      }
+      else{
+        alert("Good morning!")
+        result = "Good morning!"
+        return result
+      }
+    }
+
+  </script>
+
+  <!-- скрипт со спецификацией (describe, it...) -->
+  <script src="test.js"></script>
+
+  <!-- элемент с id="mocha" будет содержать результаты тестов -->
+  <div id="mocha"></div>
+
+  <!-- запускаем тесты! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>
