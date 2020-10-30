@@ -7,8 +7,8 @@ describe("Time", function() {
   it("Время 11:59", function() {
     assert.equal(Time("11:59"), "Good morning!");
   });
-  it("Время 01:42", function() {
-    assert.equal(Time("01:42"), "Good morning!");
+  it("Время 00:00", function() {
+    assert.equal(Time("00:00"), "Good morning!");
   });
 
   it("Время 15:53", function() {
